@@ -66,7 +66,7 @@ st.text("Conclusion: Overall, the numer of overnight stays has shown a steady in
 st.divider()
 
 # Bar chart 
-st.markdown("### Yearly total nights in Espoo 01.2010 - 12.2025")
+st.markdown("### Yearly total nights in Espoo (01.2010 - 12.2025)")
 # Counting total nights per year
 yearly = df_espoo.groupby("Year")["Espoo Nights spent"].sum()
 yearly = yearly[yearly.index != 2026] # remove 2026 data, because it is incomplete 
@@ -90,7 +90,7 @@ st.text("Conclusion: There are fewer foreign overnight stays compared to domesti
 st.divider()
 
 # Line chart: Compare Vantaa and Espoo prices
-st.markdown("### Comparison: Espoo VS Vantaa (Avarage price per night)")
+st.markdown("### Comparison: Espoo VS Vantaa (Hotels average price per night)")
 st.line_chart(df_compare, x="Month", y=["Espoo Average price per night", "Vantaa Average price per night"])
 
 st.text("Conclusion: The Covid-19 in 2020 appears to have had a stronger impact on hotel prices in Espoo, " \
